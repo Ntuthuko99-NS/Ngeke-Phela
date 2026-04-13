@@ -1,0 +1,30 @@
+{
+  "name": "Review",
+  "type": "object",
+  "properties": {
+    "to_user_email": {
+      "type": "string"
+    },
+    "to_user_name": {
+      "type": "string"
+    },
+    "rating": {
+      "type": "number",
+      "minimum": 1,
+      "maximum": 5
+    },
+    "comment": {
+      "type": "string"
+    },
+    "listing_id": {
+      "type": "string"
+    },
+    "reviewer_name": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "to_user_email",
+    "rating"
+  ]
+}
