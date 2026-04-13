@@ -1,0 +1,123 @@
+{
+  "name": "Listing",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Listing title"
+    },
+    "description": {
+      "type": "string",
+      "description": "Detailed description"
+    },
+    "price_cents": {
+      "type": "number",
+      "description": "Price in cents (ZAR)"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "Electronics",
+        "Vehicles",
+        "Furniture",
+        "Clothing",
+        "Braai & Outdoor",
+        "Property",
+        "Jobs",
+        "Services",
+        "Spaza Supplies",
+        "Baby & Kids",
+        "Sports & Leisure",
+        "Home & Garden",
+        "Books & Education",
+        "Pets",
+        "Other"
+      ]
+    },
+    "condition": {
+      "type": "string",
+      "enum": [
+        "New",
+        "Like New",
+        "Good",
+        "Fair",
+        "Poor"
+      ]
+    },
+    "images": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Array of image URLs (up to 10)"
+    },
+    "suburb": {
+      "type": "string",
+      "description": "Suburb or township name"
+    },
+    "province": {
+      "type": "string",
+      "enum": [
+        "Gauteng",
+        "Western Cape",
+        "KwaZulu-Natal",
+        "Eastern Cape",
+        "Free State",
+        "Limpopo",
+        "Mpumalanga",
+        "North West",
+        "Northern Cape"
+      ]
+    },
+    "payment_methods": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "Cash",
+          "EFT",
+          "SnapScan"
+        ]
+      }
+    },
+    "delivery_option": {
+      "type": "string",
+      "enum": [
+        "Pickup Only",
+        "Delivery Available",
+        "Both"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "sold",
+        "expired",
+        "flagged"
+      ],
+      "default": "active"
+    },
+    "is_promoted": {
+      "type": "boolean",
+      "default": false
+    },
+    "seller_name": {
+      "type": "string"
+    },
+    "seller_phone": {
+      "type": "string"
+    },
+    "views_count": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "required": [
+    "title",
+    "price_cents",
+    "category",
+    "suburb",
+    "province"
+  ]
+}
