@@ -1,0 +1,52 @@
+{
+  "name": "Conversation",
+  "type": "object",
+  "properties": {
+    "listing_id": {
+      "type": "string",
+      "description": "Reference to the listing"
+    },
+    "listing_title": {
+      "type": "string"
+    },
+    "listing_image": {
+      "type": "string"
+    },
+    "listing_price_cents": {
+      "type": "number"
+    },
+    "buyer_email": {
+      "type": "string"
+    },
+    "buyer_name": {
+      "type": "string"
+    },
+    "seller_email": {
+      "type": "string"
+    },
+    "seller_name": {
+      "type": "string"
+    },
+    "last_message": {
+      "type": "string"
+    },
+    "last_message_date": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "archived",
+        "blocked"
+      ],
+      "default": "active"
+    }
+  },
+  "required": [
+    "listing_id",
+    "buyer_email",
+    "seller_email"
+  ]
+}
