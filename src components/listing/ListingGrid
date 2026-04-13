@@ -1,0 +1,21 @@
+import ListingCard from "./ListingCard";
+
+export default function ListingGrid({ listings, onSave }) {
+  if (!listings || listings.length === 0) {
+    return (
+      <div className="text-center py-16">
+        <p className="text-4xl mb-3">🏪</p>
+        <p className="text-muted-foreground text-sm">No listings found</p>
+        <p className="text-muted-foreground/60 text-xs mt-1">Try adjusting your filters or check back later</p>
+      </div>
+    );
+  }
+
+  return (
+    <div className="grid grid-cols-2 sm:grid-cols-2 gap-3">
+      {listings.map((listing) => (
+        <ListingCard key={listing.id} listing={listing} onSave={onSave} />
+      ))}
+    </div>
+  );
+}
