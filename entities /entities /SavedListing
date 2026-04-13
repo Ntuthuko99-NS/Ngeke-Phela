@@ -1,0 +1,24 @@
+{
+  "name": "SavedListing",
+  "type": "object",
+  "properties": {
+    "listing_id": {
+      "type": "string"
+    },
+    "listing_title": {
+      "type": "string"
+    },
+    "listing_image": {
+      "type": "string"
+    },
+    "listing_price_cents": {
+      "type": "number"
+    },
+    "listing_suburb": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "listing_id"
+  ]
+}
